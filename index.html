@@ -26,14 +26,14 @@
     </style>
 </head>
 <body>
-    <h1>Station 32</h1>
+    <h1>Dehumidifier</h1>
     <div id="question"></div>
     <div id="options"></div>
-    <button onclick="nextQuestion()">SUBMIT</button>
+    <button onclick="nextQuestion()">Submit</button>
     <script>
         // Function to clear the quiz score from local storage
 function clearQuizScore() {
-    localStorage.removeItem("Station_32_Score");
+    localStorage.removeItem("Dehumidifier_1");
 }
 
 // Function to clear local storage when the tab is closed or refreshed
@@ -50,13 +50,13 @@ window.addEventListener('beforeunload', function() {
         const quiz = [
             {
                 question: "What distinctions are possible with regard to the design and speed of filters?",
-                options: ["Fast and slow filters", "Single and multilayer", "Horizontal and vertical"],
+                options: ["Fast and Slow Filters", "Single and Multilayer", "Horizontal and Vertical"],
                 answer: 2
             }
         ];
 
         let currentQuestion = 0;
-        let Station_32_Score = 0;
+        let Dehumidifier_1 = 0;
 
         // Function to display current question
         function displayQuestion() {
@@ -100,9 +100,9 @@ window.addEventListener('beforeunload', function() {
     }
 
     if (!isAnswered || selectedOption !== quiz[currentQuestion].answer) {
-        Station_32_Score = 0; // Assign zero score if question is not attempted or answered incorrectly
+        Dehumidifier_1 = 0; // Assign zero score if question is not attempted or answered incorrectly
     } else {
-        Station_32_Score++; // Increment score for correct answer
+        Dehumidifier_1++; // Increment score for correct answer
     }
 }
 
@@ -113,8 +113,8 @@ window.addEventListener('beforeunload', function() {
 
             if (currentQuestion === quiz.length) {
                 // All questions answered, store score in local storage
-                localStorage.setItem("Station_32_Score", Station_32_Score);
-                alert("Quiz completed. Your score is " + Station_32_Score);
+                localStorage.setItem("Dehumidifier_1", Dehumidifier_1);
+                alert("Quiz completed. Your score is " + Dehumidifier_1);
             } else {
                 displayQuestion();
             }
